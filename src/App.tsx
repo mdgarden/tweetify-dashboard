@@ -1,9 +1,9 @@
-import { Config } from "./components";
+import { TwitterLogin } from "./components/TwitterLogin";
 
 function App() {
   return (
     <div className="App">
-      <Config />
+      <TwitterLogin />
       <div>Hi, firebase!</div>
     </div>
   );
