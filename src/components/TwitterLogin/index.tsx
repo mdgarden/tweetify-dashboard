@@ -28,8 +28,8 @@ export const TwitterLogin = () => {
   };
   return (
     <>
-      <h1>Welcome to My Awesome App</h1>
-      {loading ? (
+      <h1>Tweetify Dashboard App</h1>
+      {!loading ? (
         <>
           <button onClick={logout}>Logout</button>
         </>
