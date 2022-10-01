@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express';
 // import { HttpMethod } from './utils/methods';
-import loginHandler from './handlers/login';
+import spotifyLoginHandler from './handlers/spotifyLogin';
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 
@@ -14,10 +14,18 @@ type RouteConfig = {
 };
 
 const routes: RouteConfig[] = [
+  // {
+  //   method: 'GET',
+  //   path: '/',
+  //   handler: spotifyLoginHandler,
+  //   authType: 'GUEST',
+  // },
   {
     method: 'GET',
-    path: '/login',
-    handler: loginHandler,
+    path: '/auth/login',
+    handler: spotifyLoginHandler,
     authType: 'GUEST',
   },
 ];
+
+export default routes;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/Header';
-import SpotifyLogin from './components/SpotifyLogin';
-import { TwitterLogin } from './components/TwitterLogin';
+import Header from './src/components/Header';
+import SpotifyLogin from './src/components/SpotifyLogin';
+import { TwitterLogin } from './src/components/TwitterLogin';
 
 function App() {
   return (
