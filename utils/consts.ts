@@ -1,0 +1,3 @@
+export const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+export const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
+export const REDIRCET_URI = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;

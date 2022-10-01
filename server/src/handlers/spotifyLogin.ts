@@ -1,28 +1,19 @@
 import { RequestHandler } from 'express';
-import Client from '../../../api/http';
-import {
-  spotifyLoginRequest,
-  spotifyLoginResponse,
-} from '../../../types/spotify';
 import { v4 as uuidv4 } from 'uuid';
+import { CLIENT_ID, REDIRCET_URI } from '../../../utils/consts';
 
-type Handler = Async<
-  RequestHandler<null, spotifyLoginRequest, spotifyLoginResponse>
->;
+type Handler = Async<RequestHandler<null>>;
 
 const handler: Handler = async (req, res) => {
-  const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-  const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
-  const redirect_uri = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
   const scope =
     'user-read-email user-read-private user-read-playback-state user-top-read';
   const state = uuidv4();
 
   const auth_query_parameters = new URLSearchParams({
     response_type: 'code',
-    client_id: client_id!,
+    client_id: CLIENT_ID!,
     scope: scope,
-    redirect_uri: redirect_uri!,
+    redirect_uri: REDIRCET_URI!,
     state: state,
   });
 

@@ -8,9 +8,9 @@ const router = Router();
 
 // router.use(auth)
 
-function catchError(handler: Async<Handler>): Handler {
-  return (...args) => handler(...args).catch(args[2]);
-}
+// function catchError(handler: Async<Handler>): Handler {
+//   return (...args) => handler(...args).catch(args[2]);
+// }
 
 router.all('*', (_, res) => res.status(404).end());
 

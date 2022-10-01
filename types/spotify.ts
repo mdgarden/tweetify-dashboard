@@ -1,7 +1,11 @@
-export type spotifyLoginRequest = {
+export type SpotifyLoginRequest = {
   name: string;
 };
 
-export type spotifyLoginResponse = {
+export type SpotifyLoginResponse = {
   name: string;
+};
+
+export type SpotifyCallbackRequest = {
+  code: string;
 };
