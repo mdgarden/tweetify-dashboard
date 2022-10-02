@@ -1,4 +1,6 @@
-import { Router } from 'express';
+import express, { Router } from 'express';
+import path from 'path';
+
 // import routes from './routes';
 // import { HttpMethod } from "../utils/methods";
 
@@ -12,6 +14,11 @@ const router = Router();
 //   return (...args) => handler(...args).catch(args[2]);
 // }
 
+router.use(express.static('public'));
+
+// router.get('*', (req, res, next) => {
+//   res.sendFile(path.join(__dirname, './public/index.html'));
+// });
 router.all('*', (_, res) => res.status(404).end());
 
 export default router;

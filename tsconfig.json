@@ -1,26 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext", "ES6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "target": "es2016",
+    "jsx": "preserve",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "jsx": "react-jsx",
-    "outDir": "./build"
+    "allowJs": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
   },
-  "inclient/srcde": [
-    "client",
-    "client/src/config/firebase.ts",
-    "src/config/firebase.ts",
-    "**/*.ts"
-  ]
+  "exclude": ["client", "build", "node_modules"]
 }

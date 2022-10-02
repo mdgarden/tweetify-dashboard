@@ -1,11 +1,7 @@
 import axios from 'axios';
 import { RequestHandler } from 'express';
-import { SpotifyCallbackRequest } from '../../../../types/spotify';
-import {
-  CLIENT_ID,
-  CLIENT_SECRET,
-  REDIRCET_URI,
-} from '../../../../utils/consts';
+import { SpotifyCallbackRequest } from '../../types/spotify';
+import { CLIENT_ID, CLIENT_SECRET, REDIRCET_URI } from '../../utils/consts';
 
 type Handler = Async<RequestHandler<null, null, null, SpotifyCallbackRequest>>;
 

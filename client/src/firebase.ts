@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -8,9 +8,9 @@ import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: "tweetify-dashboard.firebaseapp.com",
-  projectId: "tweetify-dashboard",
-  storageBucket: "tweetify-dashboard.appspot.com",
+  authDomain: 'tweetify-dashboard.firebaseapp.com',
+  projectId: 'tweetify-dashboard',
+  storageBucket: 'tweetify-dashboard.appspot.com',
   messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,

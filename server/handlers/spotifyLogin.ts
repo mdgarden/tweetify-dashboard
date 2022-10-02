@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express';
 import { v4 as uuidv4 } from 'uuid';
-import { CLIENT_ID, REDIRCET_URI } from '../../../../utils/consts';
+import { CLIENT_ID, REDIRCET_URI } from '../../utils/consts';
 
 type Handler = Async<RequestHandler<null>>;
 

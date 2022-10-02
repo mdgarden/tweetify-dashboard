@@ -2,6 +2,7 @@ import { RequestHandler } from 'express';
 // import { HttpMethod } from './utils/methods';
 import spotifyLoginHandler from './handlers/spotifyLogin';
 import spotifyCallbackHandler from './handlers/spotifyCallback';
+import spotifyTokenHanlder from './handlers/spotifyToken';
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 
@@ -25,6 +26,12 @@ const routes: RouteConfig[] = [
     method: 'GET',
     path: '/auth/callback',
     handler: spotifyCallbackHandler,
+    authType: 'GUEST',
+  },
+  {
+    method: 'GET',
+    path: '/auth/token',
+    handler: spotifyTokenHanlder,
     authType: 'GUEST',
   },
 ];
