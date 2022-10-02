@@ -1,8 +1,8 @@
-import { Router, Handler } from 'express';
+import { Router } from 'express';
 // import routes from './routes';
 // import { HttpMethod } from "../utils/methods";
 
-type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+// type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 
 const router = Router();
 

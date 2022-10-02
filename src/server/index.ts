@@ -11,5 +11,5 @@ app.use(bodyParser.json());
 app.use('/', router);
 
 app.listen(port, () => {
-  console.log(`Listening at port ${port}`);
+  console.log(`Listening at port http://localhost:${port}`);
 });
