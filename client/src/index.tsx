@@ -1,13 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './assets/scss/main.scss';
-import App from './App';
+import {
+  Route,
+  Routes,
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+import ReactDOM, { createRoot } from 'react-dom/client';
+import './assets/scss/main.scss';
+// import App from './App';
+import SpotifyLogin from './components/SpotifyLogin';
+import SpotifyCallback from './components/SpotifyCallback';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <SpotifyLogin />,
+  },
+  {
+    path: '/auth/spotify/callback',
+    element: <SpotifyCallback />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

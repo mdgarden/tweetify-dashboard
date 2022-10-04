@@ -1,11 +1,13 @@
 import React from 'react';
 
 const SpotifyLogin = () => {
-  // const authURL = `https://accounts.spotify.com/authorize?response_type=code&client_id=${process.env.REACT_APP_SPOTIFY_CLIENT_ID}&scpoe=user-read-private user-read-email&redirct_uri='http://localhost:3333/callback'`;
+  const scope =
+    'user-read-email user-read-private user-read-playback-state user-top-read';
+  const authURL = `https://accounts.spotify.com/authorize?response_type=code&client_id=${process.env.REACT_APP_SPOTIFY_CLIENT_ID}&scpoe=${scope}&redirct_uri='http://localhost:3000/auth/spotify/callback'`;
 
   return (
     <>
-      <a href="/auth/login" className="btn-spotify">
+      <a href={authURL} className="btn-spotify">
         Login with Spotify
       </a>
     </>

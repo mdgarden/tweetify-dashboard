@@ -1,24 +1,19 @@
 import React from 'react';
-import './App.scss';
+import { Route, Routes, createBrowserRouter } from 'react-router-dom';
+import SpotifyLogin from './components/SpotifyLogin';
+import SpotifyCallback from './components/SpotifyCallback';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <SpotifyLogin />,
+    },
+    {
+      path: '/auth/spotify/callback',
+      element: <SpotifyCallback />,
+    },
+  ]);
 }
 
 export default App;

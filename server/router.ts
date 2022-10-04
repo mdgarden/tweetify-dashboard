@@ -15,10 +15,6 @@ const router = Router();
 // }
 
 router.use(express.static('public'));
-
-// router.get('*', (req, res, next) => {
-//   res.sendFile(path.join(__dirname, './public/index.html'));
-// });
 router.all('*', (_, res) => res.status(404).end());
 
 export default router;
