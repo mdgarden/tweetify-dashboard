@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { app } from '../../../../firebase';
+import { auth } from '../../../../firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import { getAuth, TwitterAuthProvider } from 'firebase/auth';
-import { User } from 'firebase/auth';
+import { getAuth, TwitterAuthProvider, User } from 'firebase/auth';
+
 export const TwitterLogin = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User>();
-  const auth = getAuth(app);
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
